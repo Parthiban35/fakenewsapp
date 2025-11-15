@@ -6,7 +6,8 @@ export default function Home() {
   const navigate = useNavigate();
 
   const handleAnalyze = () => {
-    navigate("/result", { state: { content } });
+    // navigate("/result", { state: { content } });
+    navigate("/result", { state: { content }, replace: true });
   };
 
   return (
