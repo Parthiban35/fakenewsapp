@@ -1,0 +1,5 @@
+package com.fakenewdetecter.com;
+
+import com.getcapacitor.BridgeActivity;
+
+public class MainActivity extends BridgeActivity {}
