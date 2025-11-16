@@ -1,0 +1,43 @@
+.result-container {
+  min-height: 100vh;
+  background-color: #eef2f7;
+  padding: 20px;
+}
+
+.result-card {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.result-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.result-input {
+  background: #f9f9f9;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+}
+
+.back-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4a6cf7;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+
+.back-btn:hover {
+  background-color: #3c57c7;
+}

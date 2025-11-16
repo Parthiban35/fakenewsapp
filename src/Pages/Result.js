@@ -1,53 +1,44 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { analyzeFakeNews } from "../api/Analyze";
 import { useEffect, useState } from "react";
 import ResultMeter from "../Components/ResultMeter";
+import "../Pages/Result.css"   // <-- ADD THIS
 
 export default function Result() {
   const { state } = useLocation();
+  const navigate = useNavigate();
   const content = state?.content;
   const [result, setResult] = useState(null);
 
   useEffect(() => {
-    async function getResult() {
-      if (content) {
-        const res = await analyzeFakeNews(content);  // ✅ FIXED (await)
-        setResult(res);
-      }
+    if (content) {
+      const res = analyzeFakeNews(content);
+      setResult(res);
     }
-    getResult();
   }, [content]);
 
   if (!content) return <p>No content found.</p>;
 
   return (
-    <>
-    <div style={{ padding: 20 }}>
-      <h2>Analysis Result</h2>
+    <div className="result-container">
+      <div className="result-card">
+        <h2 className="result-title">Analysis Result</h2>
 
-      <p><b>Input:</b> {content}</p>
+        <p className="result-input"><b>Input:</b> {content}</p>
 
-      {result && (
-        <>
-          <ResultMeter score={result.score} />
-          <p style={{ marginTop: 10, fontSize: 18 }}>
-            {result.message}
-          </p>
-        </>
-      )}
+        {result && (
+          <>
+            <ResultMeter score={result.score} />
+            <p style={{ marginTop: 10, fontSize: 18 }}>
+              {result.message}
+            </p>
+          </>
+        )}
+
+        <button className="back-btn" onClick={() => navigate("/")}>
+          ⬅ Back
+        </button>
+      </div>
     </div>
-    <button
-  onClick={() => window.history.back()}
-  style={{
-    marginTop: 20,
-    padding: "10px 20px",
-    fontSize: 16,
-    cursor: "pointer"
-  }}
->
-  ⬅ Back
-</button>
-
-    </>
   );
 }

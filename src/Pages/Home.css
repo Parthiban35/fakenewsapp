@@ -1,0 +1,53 @@
+/* Full background */
+.home-container {
+  min-height: 100vh;
+  background-color: #f5f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Card box */
+.home-card {
+  width: 100%;
+  max-width: 450px;
+  background: #fff;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.home-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Textarea */
+.home-input {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  resize: none;
+}
+
+/* Button */
+.home-btn {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.home-btn:hover {
+  background-color: #3b7ac0;
+}
+
