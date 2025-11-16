@@ -2,7 +2,7 @@ export default function Navbar() {
   return (
     <div style={{
       padding: 15,
-      background: "#6bdcdeff",
+      background: "#091011ff",
       color: "white",
       fontSize: 20,
       borderRadius: 5,
